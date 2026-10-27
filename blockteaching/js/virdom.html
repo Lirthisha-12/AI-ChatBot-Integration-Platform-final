@@ -1,0 +1,28 @@
+<!--Virtual dom-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text"></div>
+    <button onclick="rerender()">Click me</button>
+</body>
+<script>
+    let vDom = "This is Initial Dom";
+
+    function render() {
+        document.getElementById("text").innerHTML = vDom;
+    }
+
+    function rerender() {
+        render();
+        vDom = "It is virtual dom";
+    }
+
+    // Initial render on page load
+    render();
+</script>
+</html>

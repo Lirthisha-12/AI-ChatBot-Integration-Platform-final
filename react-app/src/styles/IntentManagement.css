@@ -1,0 +1,361 @@
+/* ================================
+   INTENT MANAGEMENT PAGE
+================================ */
+
+.intent-management-page {
+    min-height: 100vh;
+    padding: 30px 40px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.intent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.intent-header-left h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #1f2937;
+}
+
+.intent-header-left p {
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.intent-back-button {
+    border: none;
+    background: transparent;
+    color: #166534;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+.intent-back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   ADD BUTTON
+================================ */
+
+.add-intent-button {
+    background: #166534;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-intent-button:hover {
+    background: #14532d;
+}
+
+
+/* ================================
+   FORM CARD
+================================ */
+
+.intent-form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.intent-form-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.intent-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.intent-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.intent-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.intent-form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #374151;
+}
+
+.intent-form-group input,
+.intent-form-group select,
+.intent-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    padding: 11px 12px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+.intent-form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.intent-form-group input:focus,
+.intent-form-group select:focus,
+.intent-form-group textarea:focus {
+    border-color: #166534;
+    box-shadow: 0 0 0 2px rgba(22, 101, 52, 0.08);
+}
+
+
+/* ================================
+   ACTIVE CHECKBOX
+================================ */
+
+.intent-active {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.intent-active input {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* ================================
+   FORM BUTTONS
+================================ */
+
+.intent-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.intent-save-button {
+    background: #166534;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.intent-save-button:hover {
+    background: #14532d;
+}
+
+.intent-cancel-button {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.intent-cancel-button:hover {
+    background: #e5e7eb;
+}
+
+
+/* ================================
+   TABLE CARD
+================================ */
+
+.intent-table-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.intent-table-card h2 {
+    margin-top: 0;
+    color: #1f2937;
+    font-size: 20px;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.intent-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.intent-table th {
+    text-align: left;
+    padding: 13px 12px;
+    background: #f9fafb;
+    color: #4b5563;
+    font-size: 13px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.intent-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #374151;
+    font-size: 14px;
+}
+
+.intent-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.intent-status-active {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.intent-status-inactive {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.intent-edit-button,
+.intent-delete-button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.intent-edit-button {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.intent-edit-button:hover {
+    background: #bae6fd;
+}
+
+.intent-delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.intent-delete-button:hover {
+    background: #fecaca;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.intent-empty {
+    text-align: center;
+    padding: 40px;
+    color: #6b7280;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+    .intent-management-page {
+        padding: 20px;
+    }
+
+    .intent-form {
+        grid-template-columns: 1fr;
+    }
+
+    .intent-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .intent-form-actions {
+        grid-column: auto;
+    }
+
+    .intent-table-card {
+        overflow-x: auto;
+    }
+
+    .intent-table {
+        min-width: 750px;
+    }
+
+    .intent-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

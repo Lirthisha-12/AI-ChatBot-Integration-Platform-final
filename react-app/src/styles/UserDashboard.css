@@ -1,0 +1,558 @@
+/* =========================================
+   USER DASHBOARD
+   Green Theme
+========================================= */
+
+.user-dashboard {
+    min-height: 100vh;
+    background: #f5f8f6;
+    color: #17231d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.user-header {
+    height: 76px;
+    background: #ffffff;
+    border-bottom: 1px solid #dfe8e2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 42px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* Brand */
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: #e5f4ea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.brand-section h1 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #183b27;
+}
+
+.brand-section p {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+    color: #718078;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-button {
+    border: 1px solid #d6e2da;
+
+    background: #ffffff;
+
+    color: #385044;
+
+    padding: 10px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #f0f7f2;
+    border-color: #9fc5aa;
+    color: #176b39;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.user-main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 45px 35px 60px;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome-section {
+    margin-bottom: 42px;
+}
+
+.welcome-section h2 {
+    margin: 0 0 8px;
+
+    font-size: 29px;
+
+    color: #173b27;
+}
+
+.welcome-section p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #6c7b72;
+}
+
+
+/* =========================================
+   AVAILABLE BOTS TITLE
+========================================= */
+
+.available-title {
+    margin: 0 0 22px;
+
+    font-size: 20px;
+
+    color: #213c2c;
+}
+
+
+/* =========================================
+   CHATBOT GRID
+========================================= */
+
+.chatbot-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   CHATBOT CARD
+========================================= */
+
+.chatbot-card {
+    background: #ffffff;
+
+    border: 1px solid #e1e9e4;
+
+    border-radius: 16px;
+
+    padding: 23px;
+
+    min-height: 265px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 3px 12px rgba(24, 59, 39, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.chatbot-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #a9cbb3;
+
+    box-shadow:
+        0 10px 25px rgba(24, 59, 39, 0.10);
+}
+
+
+/* =========================================
+   BOT CARD HEADER
+========================================= */
+
+.bot-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Bot avatar */
+
+.bot-avatar {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #e6f4ea;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* Bot name */
+
+.bot-card-header h3 {
+    margin: 0 0 6px;
+
+    font-size: 18px;
+
+    color: #193b28;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.online-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #29834a;
+
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #32a85a;
+
+    display: inline-block;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.bot-description {
+    margin: 0 0 22px;
+
+    color: #68776e;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    min-height: 42px;
+}
+
+
+/* =========================================
+   BOT DETAILS
+========================================= */
+
+.bot-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-top: 1px solid #edf1ee;
+    border-bottom: 1px solid #edf1ee;
+
+    margin-bottom: 18px;
+}
+
+.bot-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.bot-details span {
+    font-size: 11px;
+
+    color: #89968e;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.bot-details strong {
+    font-size: 13px;
+
+    color: #33483b;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.bot-details .active-text {
+    color: #278148;
+}
+
+
+/* =========================================
+   START CHAT BUTTON
+========================================= */
+
+.start-chat-button {
+    width: 100%;
+
+    border: none;
+
+    background: #247642;
+
+    color: #ffffff;
+
+    padding: 12px 15px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: auto;
+
+    transition: all 0.2s ease;
+}
+
+.start-chat-button:hover {
+    background: #1b6135;
+
+    transform: translateY(-1px);
+}
+
+.start-chat-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-bots {
+    background: #ffffff;
+
+    border: 1px solid #e1e9e4;
+
+    border-radius: 16px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 3px 12px rgba(24, 59, 39, 0.04);
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 18px;
+
+    background: #e8f4eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.empty-bots h3 {
+    margin: 0 0 8px;
+
+    color: #294434;
+
+    font-size: 18px;
+}
+
+.empty-bots p {
+    margin: 0;
+
+    color: #7b8980;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .chatbot-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .user-main {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .user-header {
+        height: auto;
+
+        padding: 15px 18px;
+
+        gap: 15px;
+    }
+
+    .brand-section h1 {
+        font-size: 17px;
+    }
+
+    .brand-section p {
+        font-size: 10px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logout-button {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .user-main {
+        padding: 30px 18px 45px;
+    }
+
+    .welcome-section {
+        margin-bottom: 30px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+
+    .welcome-section p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+    .available-title {
+        font-size: 18px;
+    }
+
+    .chatbot-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .chatbot-card {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 400px) {
+
+    .brand-section h1 {
+        font-size: 15px;
+    }
+
+    .brand-section p {
+        display: none;
+    }
+
+    .logout-button {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+
+    .welcome-section h2 {
+        font-size: 21px;
+    }
+}

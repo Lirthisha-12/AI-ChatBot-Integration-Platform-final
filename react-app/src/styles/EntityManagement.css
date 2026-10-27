@@ -1,0 +1,483 @@
+/* =========================================
+   ENTITY MANAGEMENT PAGE
+========================================= */
+
+.entity-management-page {
+    min-height: 100vh;
+    padding: 30px 40px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.entity-back-button {
+    border: none;
+    background: transparent;
+    color: #166534;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.entity-back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.entity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.entity-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.entity-header p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADD ENTITY BUTTON
+========================================= */
+
+.add-entity-button {
+    border: none;
+    background: #166534;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-entity-button:hover {
+    background: #14532d;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.entity-form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 26px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.entity-form-header {
+    margin-bottom: 22px;
+}
+
+.entity-form-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 21px;
+}
+
+.entity-form-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.entity-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.entity-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.entity-form-group label {
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.entity-form-group input,
+.entity-form-group select,
+.entity-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #1f2937;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.entity-form-group textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+.entity-form-group input:focus,
+.entity-form-group select:focus,
+.entity-form-group textarea:focus {
+    border-color: #166534;
+    box-shadow: 0 0 0 2px rgba(22, 101, 52, 0.08);
+}
+
+
+/* =========================================
+   CONTEXTUAL
+========================================= */
+
+.entity-contextual {
+    grid-column: 1 / -1;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.entity-contextual label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.entity-contextual input {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.entity-contextual small {
+    display: block;
+    margin-top: 6px;
+    margin-left: 26px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.entity-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.entity-save-button {
+    border: none;
+    background: #166534;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.entity-save-button:hover {
+    background: #14532d;
+}
+
+.entity-cancel-button {
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.entity-cancel-button:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   ENTITY LIST CARD
+========================================= */
+
+.entity-list-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.entity-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.entity-list-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 21px;
+}
+
+.entity-list-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.entity-count {
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.entity-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.entity-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.entity-table th {
+    padding: 14px 12px;
+    text-align: left;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.entity-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #374151;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.entity-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================================
+   BOT NAME
+========================================= */
+
+.entity-bot-name {
+    font-weight: 600;
+    color: #374151;
+}
+
+
+/* =========================================
+   ENTITY TYPE
+========================================= */
+
+.entity-type {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.entity-values {
+    max-width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #6b7280;
+}
+
+
+/* =========================================
+   CONTEXTUAL STATUS
+========================================= */
+
+.entity-status-yes {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.entity-status-no {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 20px;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.entity-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.entity-edit-button,
+.entity-delete-button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.entity-edit-button {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.entity-edit-button:hover {
+    background: #bae6fd;
+}
+
+.entity-delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.entity-delete-button:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.entity-empty {
+    text-align: center;
+    padding: 55px 20px;
+    color: #6b7280;
+}
+
+.entity-empty-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0fdf4;
+    color: #166534;
+    font-size: 25px;
+}
+
+.entity-empty h3 {
+    margin: 0 0 7px;
+    color: #374151;
+    font-size: 17px;
+}
+
+.entity-empty p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .entity-management-page {
+        padding: 20px;
+    }
+
+    .entity-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .entity-form {
+        grid-template-columns: 1fr;
+    }
+
+    .entity-contextual {
+        grid-column: auto;
+    }
+
+    .entity-form-actions {
+        grid-column: auto;
+    }
+
+    .entity-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

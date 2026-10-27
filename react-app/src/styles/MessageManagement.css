@@ -1,0 +1,427 @@
+/* =========================================
+   MESSAGE MANAGEMENT
+========================================= */
+
+.message-management-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f5f7fb;
+    color: #043e0d;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.message-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.message-header p {
+    margin: 7px 0 0;
+    color: #7b8496;
+    font-size: 14px;
+}
+
+.message-back-button {
+    border: none;
+    background: white;
+    color: #374151;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.message-back-button:hover {
+    background: #eef2f7;
+}
+
+
+/* =========================================
+   ACTION BAR
+========================================= */
+
+.message-action-bar {
+    background: white;
+    border-radius: 14px;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.message-count {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.count-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 11px;
+    background: #eef4ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.message-count strong {
+    display: block;
+    font-size: 22px;
+    color: #1d2939;
+}
+
+.message-count small {
+    display: block;
+    color: #8a93a3;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.add-message-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.add-message-button:hover {
+    background: #1e5004;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.message-form-card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-form-button {
+    border: none;
+    background: #f1f3f6;
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+    font-size: 23px;
+    cursor: pointer;
+    color: #555;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    background: white;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.full-width {
+    margin-top: 18px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    border: 1px solid #d6dbe3;
+    background: white;
+    color: #4b5563;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-message-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.message-table-card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.table-heading {
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.table-heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.table-heading p {
+    margin: 5px 0 0;
+    color: #8a93a3;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.message-table-card table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+.message-table-card th {
+    background: #f8fafc;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #667085;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.message-table-card td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #edf0f4;
+    font-size: 13px;
+    color: #475467;
+    vertical-align: middle;
+}
+
+.message-table-card tbody tr:hover {
+    background: #fafbfc;
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.conversation-badge {
+    display: inline-block;
+    background: #eef4ff;
+    color: #055d29;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sender {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-sender {
+    color: #475467;
+}
+
+.bot-sender {
+    color: #7c3aed;
+}
+
+.type-badge {
+    display: inline-block;
+    background: #f2f4f7;
+    color: #667085;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.message-content-cell {
+    max-width: 280px;
+    min-width: 180px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   DELETE
+========================================= */
+
+.delete-message-button {
+    border: none;
+    background: #fff1f2;
+    color: #dc2626;
+    padding: 7px 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.delete-message-button:hover {
+    background: #fee2e2;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-messages {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.empty-messages h3 {
+    margin: 0 0 7px;
+    color: #344054;
+}
+
+.empty-messages p {
+    margin: 0;
+    color: #98a2b3;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .message-management-page {
+        padding: 18px;
+    }
+
+    .message-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .message-action-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .add-message-button {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .cancel-button,
+    .save-message-button {
+        width: 100%;
+    }
+}

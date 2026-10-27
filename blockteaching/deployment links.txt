@@ -1,0 +1,2 @@
+REACT APPLICATION DEPLOYEMNET (Shopping Cart):https://reduxcart-seven.vercel.app/ 
+REACT APPLICATION DEPLOYMENT(Sir):https://reactapplication-three.vercel.app/

@@ -1,0 +1,263 @@
+import React, { useRef } from "react";
+
+const LoginForm = () => {
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = {
+      email: emailInputRef.current.value,
+      password: passwordInputRef.current.value,
+    };
+
+    console.log(formData);
+
+    emailInputRef.current.value = "";
+    passwordInputRef.current.value = "";
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Email:</label>
+      <input type="email" ref={emailInputRef} />
+
+      <label>Password:</label>
+      <input type="password" ref={passwordInputRef} />
+
+      <button type="submit">Login</button>
+    </form>
+  );
+};
+
+export default LoginForm;
+
+
+
+
+
+
+//challenge yourself
+
+import React, { useState } from "react";
+import UserList from "./components/UserList";
+
+const App = () => {
+  // Default users
+  const [users, setUsers] = useState([
+    { name: "Alice", role: "Admin", active: true },
+    { name: "Bob", role: "User", active: false },
+    { name: "Charlie", role: "User", active: true },
+  ]);
+
+  const [name, setName] = useState("");
+  const [role, setRole] = useState("User");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!name.trim()) return;
+
+    const newUser = {
+      name,
+      role,
+      active: true,
+    };
+
+    setUsers([...users, newUser]);
+    setName("");
+    setRole("User");
+  };
+
+  return (
+    <div>
+      <h1>User Management System</h1>
+
+      {/* Form to add new users */}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <select value={role} onChange={(e) => setRole(e.target.value)}>
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+        </select>
+
+        <button type="submit">Add User</button>
+      </form>
+
+      {/* User List */}
+      <UserList users={users} />
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+
+import React from "react";
+
+const UserList = ({ users }) => {
+  if (users.length === 0) {
+    return <p>No users available</p>;
+  }
+
+  return (
+    <ul>
+      {users.map((user, index) => (
+        <li key={index}>
+          {user.name}{" "}
+          {!user.active
+            ? "(Inactive)"
+            : user.role === "Admin"
+            ? "(Admin)"
+            : ""}
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default UserList;
+
+
+
+
+PBA 2
+routing1
+
+## 🧠 **Question: Implement Routing and Lazy Loading in a React Application**
+
+### **Problem Description**
+
+You are required to create a **React application** that demonstrates **Routing** and **Lazy Loading** using React Router and the `React.lazy()` API.
+
+Your application should have **three pages**:
+
+1. **Home Page** – displays the text: `"Welcome to Home Page"`
+2. **About Page** – displays the text: `"About Us Page"`
+3. **Contact Page** – displays the text: `"Contact Page"`
+
+Each of these pages should be loaded **lazily** (i.e., using `React.lazy()` and `Suspense`) to improve performance.
+
+---
+
+### **Functional Requirements**
+
+1. Use **React Router v6** (or above) for navigation between pages.
+2. Define the following routes:
+
+   * `/` → Home Page
+   * `/about` → About Page
+   * `/contact` → Contact Page
+3. Implement a **navigation bar** at the top containing three links:
+   `Home | About | Contact`
+4. While a component is being lazily loaded, display a **loading message** such as `"Loading..."`.
+5. Each route component (`Home`, `About`, `Contact`) must be created as a **separate file** under a `pages` folder.
+6. The main routing logic should be implemented inside `App.jsx`.
+
+---
+
+### **Testing Requirements**
+
+Write a test file named **`App.test.jsx`** that verifies:
+
+1. The Home page renders by default when visiting `/`.
+2. The loading message `"Loading..."` is displayed while lazy loading occurs.
+3. Navigating to `/about` displays the About page content.
+4. Navigating to `/contact` displays the Contact page content.
+5. Clicking the navigation links updates the displayed page correctly.
+
+You must use **React Testing Library** and **Jest** for testing.
+
+---
+
+### **Hints**
+
+* Use `React.lazy(() => import('./pages/Home'))` syntax for lazy imports.
+* Wrap the `Routes` inside a `<Suspense fallback={<p>Loading...</p>}>` block.
+* Use `MemoryRouter` in your test file instead of `BrowserRouter` for isolated routing tests.
+* Use `waitFor()` to wait for the lazy-loaded component to appear in the DOM.
+
+---
+
+### **Expected Output**
+
+✅ When the application runs:
+
+* The Home page loads first with the correct heading.
+* Clicking **About** shows the About page.
+* Clicking **Contact** shows the Contact page.
+* A “Loading…” message briefly appears while pages load lazily.
+
+✅ When running tests:
+
+* All tests pass successfully, verifying routes and lazy loading behavior.
+
+
+
+routing 2
+
+
+
+
+QUESTION DESCRIPTION:
+You have been tasked with improving the performance of a React Single Page Application (SPA) for a company’s internal dashboard. The application has multiple features, including a dashboard with various modules (e.g., Charts, Reports, Admin Settings, etc.), user authentication, and a global navigation system.
+
+Your goal is to implement code splitting and lazy loading throughout the application to reduce the initial page load time, making the app faster and more user-friendly.
+
+You will implement React.lazy(), Suspense, and Webpack optimization techniques to achieve this.
+
+
+
+Features:
+
+Code Splitting with React.lazy
+Routing (React Router)
+Suspense + Fallback UI
+Error Boundaries
+Dynamic Imports (on interaction)
+
+
+Tasks:
+
+Setup the SPA project with React, Webpack, and necessary loaders.
+Split your application into logical sections (routes, components, etc.) for lazy loading:
+Lazy load major routes like Dashboard, Reports, Settings, and User Profile.
+Break down large components like Charts, Modals, and Tables into smaller lazy-loaded chunks.
+Implement Suspense with Fallbacks:
+
+Use the Suspense component with fallback loading indicators like spinners or skeleton loaders for each lazy-loaded route/component.
+
+Create a global fallback for the entire application and a custom fallback for individual components (e.g., for slow network conditions).
+
+Optimize with Webpack's splitChunks:
+
+Configure Webpack to optimize the bundling of shared dependencies and ensure that they are loaded only once.
+
+Ensure vendor code (third-party libraries) like react-router-dom, axios, react-redux, etc., is extracted into separate chunks.
+
+Implement Error Boundaries:
+
+Use React Error Boundaries around lazy-loaded components to catch loading errors (e.g., chunk loading failures) and provide a meaningful error message or fallback UI.
+
+Preload important resources:
+
+Use webpackPrefetch or webpackPreload for routes or components that the user is likely to visit next, especially after authentication.
+Test the lazy loading of these routes and components under slow network conditions using Chrome DevTools' network throttling.
+Monitor bundle sizes with tools like webpack-bundle-analyzer and verify performance improvements using Lighthouse and React Profiler.
+Use dynamic imports to load modals, charts, and large forms only when necessary (e.g., when a user clicks a button to show the modal or chart).
+Write unit and integration tests for lazy-loaded components:
+Mock lazy-loaded components during unit testing with Jest.
+Write integration tests to ensure the fallback is properly rendered and the actual component loads after the chunk is fetched.
+
+
+
+

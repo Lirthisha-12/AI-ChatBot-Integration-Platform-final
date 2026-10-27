@@ -1,0 +1,549 @@
+/* =========================================
+   CONVERSATION MANAGEMENT
+========================================= */
+
+.conversation-management-page {
+    min-height: 100vh;
+    padding: 30px 40px;
+    background: #f5f7fb;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.conversation-back-button {
+    border: none;
+    background: transparent;
+    color: #166534;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.conversation-back-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.conversation-header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.conversation-header p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-conversation-button {
+    border: none;
+    background: #166534;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-conversation-button:hover {
+    background: #14532d;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.conversation-form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 26px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.conversation-form-heading {
+    margin-bottom: 22px;
+}
+
+.conversation-form-heading h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 21px;
+}
+
+.conversation-form-heading p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.conversation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.conversation-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.conversation-form-group label {
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.conversation-form-group input,
+.conversation-form-group select,
+.conversation-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #1f2937;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.conversation-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.conversation-form-group input:focus,
+.conversation-form-group select:focus,
+.conversation-form-group textarea:focus {
+    border-color: #166534;
+    box-shadow: 0 0 0 2px rgba(22, 101, 52, 0.08);
+}
+
+
+/* =========================================
+   FULL WIDTH
+========================================= */
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   AGENT CHECKBOX
+========================================= */
+
+.conversation-agent-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.conversation-agent-option label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.conversation-agent-option input {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.conversation-form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.conversation-save-button {
+    border: none;
+    background: #166534;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.conversation-save-button:hover {
+    background: #14532d;
+}
+
+.conversation-cancel-button {
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    color: #374151;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.conversation-cancel-button:hover {
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   LIST CARD
+========================================= */
+
+.conversation-list-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.conversation-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.conversation-list-header h2 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 21px;
+}
+
+.conversation-list-header p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.conversation-count {
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.conversation-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.conversation-table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+.conversation-table th {
+    padding: 14px 12px;
+    text-align: left;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.conversation-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #374151;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.conversation-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.conversation-user {
+    color: #374151;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CHANNEL
+========================================= */
+
+.conversation-channel {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SESSION
+========================================= */
+
+.conversation-session {
+    display: block;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #6b7280;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.conversation-date {
+    white-space: nowrap;
+    color: #6b7280;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.conversation-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ACTIVE */
+
+.conversation-status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+
+/* COMPLETED */
+
+.conversation-status.completed {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+
+/* CLOSED */
+
+.conversation-status.closed {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+
+/* TRANSFERRED */
+
+.conversation-status.transferred {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.conversation-rating {
+    color: #f59e0b;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   AGENT
+========================================= */
+
+.agent-yes {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.agent-no {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.conversation-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.conversation-edit-button,
+.conversation-delete-button {
+    border: none;
+    padding: 7px 11px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.conversation-edit-button {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.conversation-edit-button:hover {
+    background: #bae6fd;
+}
+
+.conversation-delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.conversation-delete-button:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.conversation-empty {
+    text-align: center;
+    padding: 55px 20px;
+    color: #6b7280;
+}
+
+.conversation-empty-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f0fdf4;
+    font-size: 24px;
+}
+
+.conversation-empty h3 {
+    margin: 0 0 7px;
+    color: #374151;
+    font-size: 17px;
+}
+
+.conversation-empty p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .conversation-management-page {
+        padding: 20px;
+    }
+
+    .conversation-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .conversation-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .conversation-form-actions {
+        grid-column: auto;
+    }
+
+    .conversation-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

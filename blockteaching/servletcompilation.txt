@@ -1,0 +1,1 @@
+javac -cp "C:\Users\lirth\Downloads\apache-tomcat-10.1.50\apache-tomcat-10.1.50\lib\servlet-api.jar" -d WEB-INF/classes sample/*.java
